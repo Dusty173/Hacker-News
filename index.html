@@ -50,7 +50,7 @@
 </nav>
 
 <!-- area for stories (all stories, user stories, favorites) -->
-<section class="stories-container container">
+<section id="stories-container" class="stories-container container">
   
   <form action="#" class="hidden" id="submitstoryform">
     <div>
@@ -66,6 +66,7 @@
       <input type="url" id="create-url" required placeholder="Story URL">
     </div>
     <button type="submit">Submit</button>
+    <hr>
   </form>
 
   <!-- loading message (removed by JS after stories loaded) -->
@@ -121,7 +122,7 @@
  
 <section id="user-profile" class="hidden">
   <div class="user-profile-div container">
-    <h3>Your Profile Info</h3>
+    <h4>Your Profile Info</h4>
     <section>
       <div>Name:<span id="profile-name">Name</span></div>
       <div>Username: <span id="profile-username">Username:</span></div>
