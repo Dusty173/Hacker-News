@@ -16,7 +16,10 @@
   margin: 20px 30px;
 }
 
-
+#favorited-stories, #my-stories{
+  list-style: none;
+  padding-left: 20px;
+}
 /* Individual stories */
 
 .story-link {
@@ -32,8 +35,25 @@
 
 .story-author {
   margin-left: 2em;
+  font-size: 0.8rem;
+  color: green;
+  padding: 5px 0;
 }
 
 .story-user {
   display: block;
+  margin-left: 2em;
+  font-size: 0.8rem;
+  color: orange;
 }
+
+.star, .deletebtn {
+  font-size: 0.75rem;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.deletebtn:hover {
+  color: red;
+}
+

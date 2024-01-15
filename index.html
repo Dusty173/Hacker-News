@@ -37,6 +37,11 @@
   <div class="navbar-brand">
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
+  <div class="main-nav-links hidden">
+    <a class="nav-link" href="#" id="nav-submit-story">Submit</a>
+    <a class="nav-link" href="#" id="nav-favorites">Favorites</a>
+    <a class="nav-link" href="#" id="nav-my-stories">My Stories</a>
+  </div>
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
@@ -46,12 +51,30 @@
 
 <!-- area for stories (all stories, user stories, favorites) -->
 <section class="stories-container container">
+  
+  <form action="#" class="hidden" id="submitstoryform">
+    <div>
+      <label for="create-author">Author</label>
+      <input type="text" id="create-author" required placeholder="Author Name">
+    </div>
+    <div>
+      <label for="create-title">Title</label>
+      <input type="text" id="create-title" required placeholder="Title Name">
+    </div>
+    <div>
+      <label for="create-url">URL:</label>
+      <input type="url" id="create-url" required placeholder="Story URL">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
 
   <!-- loading message (removed by JS after stories loaded) -->
   <div id="stories-loading-msg">Loading&hellip;</div>
 
   <!-- List of all stories -->
   <ol id="all-stories-list" class="stories-list"></ol>
+  <ol id="favorited-stories" class="hidden stories-list"></ol>
+  <ol id="my-stories" class="hidden stories-list"></ol>
 
 </section>
 
@@ -95,6 +118,18 @@
     <button type="submit">create account</button>
   </form>
 </section>
+ 
+<section id="user-profile" class="hidden">
+  <div class="user-profile-div container">
+    <h3>Your Profile Info</h3>
+    <section>
+      <div>Name:<span id="profile-name">Name</span></div>
+      <div>Username: <span id="profile-username">Username:</span></div>
+      <div>Account Created: <span id="profile-date"></span></div>
+    </section>
+  </div>
+</section>
+
 
 <!-- Library JS & our JS -->
 <script src="https://unpkg.com/jquery"></script>
