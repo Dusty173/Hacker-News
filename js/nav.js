@@ -42,7 +42,7 @@ function navStorySubmit(e){
   $submitForm.show();
 }
 
-$navSubmitStory.on('click', navStorySubmit());
+$navSubmitStory.on('click', navStorySubmit);
 
 function navFavorites(e){
   hidePageComponents();
