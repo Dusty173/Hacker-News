@@ -49,5 +49,5 @@ function navFavorites(e){
   putFavoritesListOnPage();
 }
 
-$body.on('click', '#nav-favorites', navFavorites());
+$body.on('click', '#nav-favorites', navFavorites);
 
