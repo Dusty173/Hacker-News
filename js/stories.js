@@ -110,7 +110,7 @@ async function submitStory(e){
 
 $submitForm.on('submit', submitStory);
 
-function showFavoritesList(){
+function putFavoritesListOnPage(){
   $favoritedStories.empty();
   if (currentUser.favorites.length === 0){
     $favoritedStories.append('<h3>You have not favorited anything yet.</h3>');
@@ -124,6 +124,7 @@ function showFavoritesList(){
 
 
 async function toggleFavorites(e){
+  console.debug(toggleFavorites)
   const $target = $(e.target);
   const $Li = $target.closest('li');
   const Id = $Li.attr('id');
