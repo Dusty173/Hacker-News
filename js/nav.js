@@ -49,6 +49,8 @@ function navFavorites(){
   putFavoritesListOnPage();
 }
 
+
+
 $body.on('click', '#nav-favorites', navFavorites);
 
 function navbarProfile(e){
@@ -64,4 +66,6 @@ function toggleUserStories(){
   getUserStories();
   $ownStories.show();
 }
+
+$body.on('click', '#nav-my-stories', toggleUserStories);
 
