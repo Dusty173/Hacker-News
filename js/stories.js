@@ -124,17 +124,17 @@ function putFavoritesListOnPage(){
 
 
 async function toggleFavorites(e){
-  const $target = $(e.target);
-  const $Li = $target.closest('li');
-  const Id = $Li.attr('id');
-  const story = storyList.stories.find(s => s.Id === Id);
+  const $targt = $(e.target);
+  const $Li = $targt.closest('li');
+  const storyId = $Li.attr('id');
+  const story = storyList.stories.find(s => s.storyId === storyId);
 
-  if ($target.hasClass('fas')){
+  if ($targt.hasClass('fas')){
     await currentUser.removeFavorite(story);
-    $target.closest('i').toggleClass("fas far");
+    $targt.closest('i').toggleClass("fas far");
   } else {
     await currentUser.addFavorite(story);
-    $target.closest('i').toggleClass("fas far");
+    $targt.closest('i').toggleClass("fas far");
   }
 }
 

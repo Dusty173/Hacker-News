@@ -219,12 +219,12 @@ class User {
   }
 
   async addFavorite(story){
-    this.favorites = this.favorites.push(story);
+    this.favorites.push(story);
     await this._addOrRemoveFavorite("add", story);
   }
 
   async removeFavorite(story){
-    this.favorites = this.favorites.filter(s => s.storyId !== storyId);
+    this.favorites = this.favorites.filter(s => s.storyId !== story.storyId);
     await this._addOrRemoveFavorite("remove", story);
   }
 
