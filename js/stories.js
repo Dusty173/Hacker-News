@@ -20,7 +20,7 @@ async function getAndShowStoriesOnStart() {
  */
 
 function generateStoryMarkup(story, showDeletebtn = true) {
-  console.debug("generateStoryMarkup", story);
+  // console.debug("generateStoryMarkup", story);
 
   const hostName = story.getHostName();
   const showStar = Boolean(currentUser);

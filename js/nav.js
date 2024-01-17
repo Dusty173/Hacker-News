@@ -51,7 +51,8 @@ function navFavorites(){
 
 $body.on('click', '#nav-favorites', navFavorites);
 
-function navbarProfile(){
+function navbarProfile(e){
+  console.debug('navbarProfile');
   hidePageComponents();
   $userProfile.show();
 }
