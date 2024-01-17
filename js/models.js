@@ -77,7 +77,7 @@ class StoryList {
     const res = await axios({
       method: "POST",
       url: `${BASE_URL}/stories`,
-      data: {token, story: {title, author, url}}
+      data: { token, story: { title, author, url }},
     });
     
     const newStory = new Story(res.data.story);

@@ -116,6 +116,7 @@ function putFavoritesListOnPage(){
     $favoritedStories.append('<h3>You have not favorited anything yet.</h3>');
   } else {
     for(let story of currentUser.favorites){
+      const $story = generateStoryMarkup(story)
       $favoritedStories.append($story);
     }
   }
