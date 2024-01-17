@@ -109,15 +109,12 @@ function saveUserCredentialsInLocalStorage() {
 
 function updateUIOnUserLogin() {
   console.debug("updateUIOnUserLogin");
-
-  $allStoriesList.show();
-
+  hidePageComponents();
   updateNavOnLogin();
-  getUserProfile();
   $allStoriesList.show();
-  $storiesContainer.show();
+  getUserProfile();
   putStoriesOnPage();
-
+  $storiesContainer.show();
 }
 
 function getUserProfile(){
