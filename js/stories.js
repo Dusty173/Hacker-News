@@ -124,7 +124,6 @@ function putFavoritesListOnPage(){
 
 
 async function toggleFavorites(e){
-  console.debug(toggleFavorites)
   const $target = $(e.target);
   const $Li = $target.closest('li');
   const Id = $Li.attr('id');
@@ -139,4 +138,4 @@ async function toggleFavorites(e){
   }
 }
 
-$storiesLists.on('click', 'star', toggleFavorites);
+$storiesLists.on('click', '.star', toggleFavorites);

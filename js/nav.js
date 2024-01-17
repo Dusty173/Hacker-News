@@ -36,7 +36,7 @@ function updateNavOnLogin() {
   $navUserProfile.text(`${currentUser.username}`).show();
 }
 
-function navStorySubmit(e){
+function navStorySubmit(){
   hidePageComponents();
   $allStoriesList.show();
   $submitForm.show();
@@ -44,10 +44,23 @@ function navStorySubmit(e){
 
 $navSubmitStory.on('click', navStorySubmit);
 
-function navFavorites(e){
+function navFavorites(){
   hidePageComponents();
   putFavoritesListOnPage();
 }
 
 $body.on('click', '#nav-favorites', navFavorites);
+
+function navbarProfile(){
+  hidePageComponents();
+  $userProfile.show();
+}
+
+$navUserProfile.on('click', navbarProfile);
+
+function toggleUserStories(){
+  hidePageComponents();
+  getUserStories();
+  $ownStories.show();
+}
 

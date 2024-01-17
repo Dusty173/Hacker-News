@@ -75,8 +75,8 @@ class StoryList {
   async addStory( user, {title, author, url}) {
     const token = user.loginToken;
     const res = await axios({
-      method: 'POST',
-      url:`${BASE_URL}/stories`,
+      method: "POST",
+      url: `${BASE_URL}/stories`,
       data: {token, story: {title, author, url}}
     });
     
@@ -91,11 +91,11 @@ class StoryList {
     const token = user.loginToken;
     await axios({
       url: `${BASE_URL}/stories/${storyId}`,
-      method: 'DELETE',
+      method: "DELETE",
       data: {token: user.loginToken}
     });
 
-    this.stories = this.stories.filter(story => storyId !== storyId);
+    this.stories = this.stories.filter(story => story.storyId !== storyId);
 
     user.ownStories = user.ownStories.filter(s => s.storyId !== storyId);
     user.favorites = user.favorites.filter(s => s.storyId !== storyId);
@@ -220,7 +220,7 @@ class User {
 
   async addFavorite(story){
     this.favorites = this.favorites.push(story);
-    await this._addOrRemoveFavorite('add', story);
+    await this._addOrRemoveFavorite("add", story);
   }
 
   async removeFavorite(story){
@@ -229,7 +229,7 @@ class User {
   }
 
   async _addOrRemoveFavorite(state, story){
-    const method = state === 'add' ? 'POST' : 'DELETE';
+    const method = state === "add" ? "POST" : "DELETE";
     const token = this.loginToken;
     await axios({
       url:`${BASE_URL}/users/${this.username}/favorites/${story.storyId}`,

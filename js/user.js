@@ -113,4 +113,15 @@ function updateUIOnUserLogin() {
   $allStoriesList.show();
 
   updateNavOnLogin();
+  getUserProfile();
+  $allStoriesList.show();
+  $storiesContainer.show();
+  putStoriesOnPage();
+
+}
+
+function getUserProfile(){
+  $('#profilename').text(currentUser.name);
+  $('#profile-username').text(currentUser.username);
+  $('#profile-date').text(currentUser.createdAt.slice(0,10));
 }
