@@ -26,16 +26,16 @@ function generateStoryMarkup(story, showDeletebtn = false) {
   const showStar = Boolean(currentUser);
   return $(`
       <li id="${story.storyId}">
-        <div
+        <div>
         ${showDeletebtn ? getDeleteBtn() : ''}
         ${showStar ? getStar(story, currentUser) : ''}
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
         </a>
         <small class="story-hostname">(${hostName})</small>
-        <small class="story-author">by ${story.author}</small>
-        <small class="story-user">posted by ${story.username}</small>
-        </div
+        <div class="story-author">by ${story.author}</div>
+        <div class="story-user">posted by ${story.username}</div>
+        </div>
       </li>
     `);
 }
