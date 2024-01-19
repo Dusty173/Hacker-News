@@ -95,7 +95,7 @@ async function submitStory(e){
 
   const title = $('#create-title').val();
   const url = $('#create-url').val();
-  const author = $('#create-author');
+  const author = $('#create-author').val();
   const username = currentUser.username;
   const storyInfo = {title, url, author, username};
 
